@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 8px 12px;
+            text-align: center;
+        }
+
+        thead {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+<body>
+    <main>
+        <h1>Ejercicio 2</h1>
+        <p>Diseñar una página web que maquete la siguiente tabla. Utilizarás HTML5, todo lo
+            que no puedas hacer, lo dejarás sin hacer. Investiga el uso de las etiquetas thead,tbody,tfooter
+            y si lo consideras, úsalas. Nombra al archivo ejercicio2.html.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Comida</th>
+                    <th>Frutas</th>
+                    <th>Verduras</th>
+                    <th>Postre</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td rowspan="2">Desayuno</td>
+                    <td>Manzana</td>
+                    <td>Zanahoria</td>
+                    <td>Helado</td>
+                </tr>
+
+                <tr>
+                    <td>Banana</td>
+                    <td>Espinaca</td>
+                    <td rowspan="2">Tarta de queso</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2">Almuerzo</td>
+                    <td>Naranja</td>
+                    <td>Brócoli</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">Ensalada Mixta</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <!-- navegacion entre ejercicios -->
+    <nav>
+        <ul id="activities-list"></ul>
+    </nav>
+    <script type="module" src="code/index.js"></script>
+</body>
+
+</html>

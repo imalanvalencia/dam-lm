@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 4</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <style>
+        :root {
+            --gray-color: #333333;
+            --bg-white-color: #f0f0f0;
+            --title-color: #f4f4f4;
+            --text-color: #1e1e1e;
+        }
+
+        * {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-white-color);
+        }
+
+        header {
+            background-color: var(--gray-color);
+            text-align: center;
+            padding: 20px;
+            color: var(--title-color);
+        }
+
+        header h1 span {
+            display: block;
+        }
+
+        header ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            text-transform: capitalize;
+        }
+
+        header ul a {
+            text-decoration: none;
+            color: var(--title-color);
+            font-weight: bold;
+        }
+
+        header ul a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: #fff;
+            margin: 24px 96px;
+            padding: 24px;
+        }
+
+        main header {
+            background-color: var(--gray-color);
+            padding: 16px;
+            text-align: center;
+            color: var(--title-color);
+        }
+
+        main header h2{
+            font-size: x-large;
+        }
+
+        footer {
+            background-color: var(--gray-color);
+            padding: 16px 96px;
+            display: flex;
+            justify-content: space-between;
+            max-height: 48px;
+        }
+
+        footer p {
+            color: var(--title-color);
+            font-weight: medium;
+        }
+
+        footer aside {
+            background-color: var(--bg-white-color);
+            padding: 16px 28px;
+            margin: -24px 0;
+        }
+
+        footer aside ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: larger;
+        }
+
+        footer aside li {
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>LMMundiViajes
+            <span style="font-size: medium;">Ejercicio 4</span>
+        </h1>
+        <ul>
+            <li><a href="/inicio">inicio</a></li>
+            <li><a href="/destinos">destinos</a></li>
+            <li><a href="/nosotros">Acerca de nosotros</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <header>
+            <h2>Viaje a Tokio</h2>
+
+            <p>Publicado el 26 de junio del 2023</p>
+        </header>
+
+        <section>
+            <h3>Prepativos</h3>
+            <p>Para nuestro emocionante viaje a Tokio, comenzamos a planificar con anticipación. Compramos nuestros
+                boletos de avión, hicimos reservas en un hotel céntrico y decidimos las atracciones que queríamos
+                visitar.</p>
+        </section>
+
+        <section>
+            <h3>Explorando Tokio</h3>
+            <p>Durante nuestra estadía en Tokio, exploramos la ciudad a fondo. Visitamos el Palacio Imperial,
+                disfrutamos de la comida callejera en Shibuya, y experimentamos la vida nocturna en Shinjuku.
+                También tuvimos la oportunidad de sumergirnos en la cultura japonesa al visitar templos antiguos y
+                participar en ceremonias del té.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy;2023 LMMundiViajes - Todos los derechos reservados</p>
+
+        <aside>
+            <h2>Artículos relacionados</h2>
+
+            <ul>
+                <li><a href="/articulos/los-mejores-restaurantes-de-tokio">Los mejores restaurantes de Tokio</a></li>
+                <li><a href="/articulo/consejos-de-viaje-para-Japón">Consejos de viaje para Japón</a></li>
+            </ul>
+        </aside>
+    </footer>
+
+
+    <!-- navegacion entre ejercicios -->
+    <nav>
+        <ul id="activities-list"></ul>
+    </nav>
+    <script type="module" src="code/index.js"></script>
+</body>
+
+</html>

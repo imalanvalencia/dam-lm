@@ -1,0 +1,225 @@
+:root {
+  /* colores */
+  --sunshine-yellow: #FBEC6B;
+  /* color-1 */
+  --golden-honey: #F4BC6B;
+  /* color-2 */
+  --peach-blush: #EB8B6B;
+  /* color-3 */
+  --rose-coral: #E0536B;
+  /* color-4 */
+  --magenta-bloom: #D6306D;
+  /* color-5 */
+
+  --deep-berry: #A32C68;
+  /* color-6 */
+  --royal-plum: #722A65;
+  /* color-7 */
+  --midnight-violet: #422662;
+  /* color-8 */
+  --navy-deep: #12255D;
+  /* color-9 */
+
+  --ocean-slate: #275B75;
+  /* color-10 */
+  --teal-river: #3C918B;
+  /* color-11 */
+  --mint-wave: #52C6A2;
+  /* color-12 */
+  --fresh-mint: #66F8B6;
+  /* color-13 */
+
+  --light-purple: #b793d0;
+  --light-blue: #4ef1e0;
+}
+
+
+/* Estilos Generales */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+  font-family: sans-serif;
+
+  min-height: 100vh;
+  min-width: 80vw;
+}
+
+main {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.encabezado-calendario h2 {
+  padding: 10px 20px;
+  background: white;
+  font-size: medium;
+  border-radius: 32px;
+  max-width: max-content;
+}
+
+
+/* Estilos Calendario */
+.calendario {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Estilos Semanas */
+.semana {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.semana-1 a {
+  background-color: var(--golden-honey);
+}
+
+.semana-2 a {
+  background-color: var(--peach-blush);
+}
+
+.semana-3 a {
+  background-color: var(--rose-coral);
+}
+
+.semana-4 a {
+  background-color: var(--magenta-bloom);
+}
+
+.semana-5 a {
+  background-color: var(--deep-berry);
+}
+
+.nombres-dias {
+  background: linear-gradient(to right,
+
+      var(--sunshine-yellow) 0%,
+      var(--sunshine-yellow) calc(100% / 7),
+      /* Parada dura */
+
+      /* Día 2: Martes */
+      color-mix(in srgb, var(--sunshine-yellow) 83.33%, var(--golden-honey)) calc(100% / 7),
+      color-mix(in srgb, var(--sunshine-yellow) 83.33%, var(--golden-honey)) calc(100% / 7 * 2),
+
+      /* Día 3: Miércoles */
+      color-mix(in srgb, var(--sunshine-yellow) 66.66%, var(--golden-honey)) calc(100% / 7 * 2),
+      color-mix(in srgb, var(--sunshine-yellow) 66.66%, var(--golden-honey)) calc(100% / 7 * 3),
+
+      /* Día 4: Jueves */
+      color-mix(in srgb, var(--sunshine-yellow) 50%, var(--golden-honey)) calc(100% / 7 * 3),
+      color-mix(in srgb, var(--sunshine-yellow) 50%, var(--golden-honey)) calc(100% / 7 * 4),
+
+      /* Día 5: Viernes */
+      color-mix(in srgb, var(--sunshine-yellow) 33.33%, var(--golden-honey)) calc(100% / 7 * 4),
+      color-mix(in srgb, var(--sunshine-yellow) 33.33%, var(--golden-honey)) calc(100% / 7 * 5),
+
+      /* Día 6: Sábado */
+      color-mix(in srgb, var(--sunshine-yellow) 16.66%, var(--golden-honey)) calc(100% / 7 * 5),
+      color-mix(in srgb, var(--sunshine-yellow) 16.66%, var(--golden-honey)) calc(100% / 7 * 6),
+
+      /* Día 7: Domingo - Color cerca del final */
+      var(--golden-honey) calc(100% / 7 * 6),
+      var(--golden-honey) 100%);
+
+}
+
+
+
+
+/* Estilos Dias */
+.dia-nombre,
+.dia {
+  min-width: calc((100% / 7) - 1px);
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  list-style: none;
+  border-left: white solid 1px;
+  border-radius: 4px;
+  position: relative;
+  flex-grow: 1;
+}
+
+.dia a:hover {
+  text-decoration: underline;
+  background-color: var(--fresh-mint);
+  color: white;
+}
+
+/* Estilos para los enlaces */
+.dia a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  transition: background-color .5s;
+}
+
+.dia a:active {
+  background-color: var(--navy-deep);
+  transition: background-color 2s;
+}
+
+.semana-1 a:visited {
+  color: var(--navy-deep);
+  background-color: var(--navy-deep);
+}
+
+.semana-2 a:visited {
+  color: var(--navy-deep);
+  background-color: var(--navy-deep);
+}
+
+.semana-3 a:visited {
+  color: var(--navy-deep);
+  background-color: var(--navy-deep);
+}
+
+.semana-4 a:visited {
+  color: var(--navy-deep);
+  background-color: var(--navy-deep);
+}
+
+.semana-5 a:visited {
+  color: var(--navy-deep);
+  background-color: var(--navy-deep);
+}
+
+.semana-5 .dia {
+  flex-grow: 0;
+}
+
+.semana .dia:nth-child(7n - 7) {
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Estilos movil hasta 600px de ancho */
+@media (max-width: 600px) {
+  .calendario {
+    flex-direction: column;
+
+  }
+
+
+  .nombres-dias {
+    display: none;
+  }
+
+  .dia {
+    width: 100%;
+    border-bottom: 1px solid white;
+  }
+}

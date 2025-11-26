@@ -1,0 +1,56 @@
+.products {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 30px 0;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: var(--white);
+    border: 1px solid var(--platinum);
+    padding: 10px 10px 30px 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    transform: rotate(2deg);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 250px;
+    text-align: center;
+    color: var(--orange-web);
+}
+
+.product-card:nth-child(2) {
+    transform: rotate(-1deg);
+}
+
+.product-card:nth-child(3) {
+    transform: rotate(3deg);
+}
+
+.product-card:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    color: var(--oxford-blue);
+}
+
+.product-card img {
+    width: 100%;
+    max-height: 173px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid var(--oxford-blue);
+}
+
+.product-card p {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+/* Correccion a el main y aside en esta página */
+.page-content-wrapper {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: block;
+}

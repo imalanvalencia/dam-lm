@@ -1,0 +1,41 @@
+:root {
+    --image-width: 200px;
+}
+
+div {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: var(--image-width);
+  animation: mover-esquinas 4s infinite;
+}
+
+@keyframes girar {
+  50% {
+    rotate: 360deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes mover-esquinas {
+  25% {
+    transform: translate(calc(100vw - var(--image-width) + 50), 0vh);
+  }
+
+  50% {
+    transform: translate(calc(100vw - var(--image-width) + 50), calc(100vh - var(--image-width) + 50));
+  }
+
+  75% {
+    transform: translate(0, calc(100vh - var(--image-width) + 50));
+  }
+
+  100% {
+    transform: translate(0, 0vh);
+  }
+}

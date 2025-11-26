@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+    <main>
+        <h1>Ejercicio 3</h1>
+
+        <form style="display: flex; flex-direction: column; gap: 1em; max-width: 60%;">
+            <label>
+                Nombre
+                <input type="text" name="name-user">
+            </label>
+
+            <label>
+                Apellido
+                <input type="text" name="lastname-user">
+            </label>
+
+            <label>
+                Telefono
+                <input type="tel" name="phone">
+            </label>
+
+            <label>
+                Correo
+                <input type="email" name="email">
+            </label>
+
+            <label>
+                Fecha de Entrada
+                <input type="date" name="date-in">
+            </label>
+
+            <label>
+                Fecha de Salida
+                <input type="date" name="date-out">
+            </label>
+
+            <fieldset style="display: flex; flex-direction: column; gap: 1em;">
+                <legend>Tamaño de habitacion</legend>
+
+                <label>
+                    <input type="radio" name="hab-size" value="simple">
+                    Habitacion simple
+                </label>
+                <label>
+                    <input type="radio" name="hab-size" value="doble">
+                    Habitacion doble
+                </label>
+                <label>
+                    <input type="radio" name="hab-size" value="matrimonial">
+                    Habitacion matrimonial
+                </label>
+            </fieldset>
+
+            <fieldset style="display: flex; flex-direction: column; gap: 1em;">
+                <legend>Adicionales</legend>
+
+                <label>
+                    <input type="radio" name="hab-size" value="desayuno">
+                    Desayuno
+                </label>
+                <label>
+                    <input type="radio" name="hab-size" value="comida">
+                    Comida
+                </label>
+                <label>
+                    <input type="radio" name="hab-size" value="cena">
+                    Cena
+                </label>
+                <label>
+                    <input type="radio" name="hab-size" value="cama-supletoria">
+                    Cama supletoria
+                </label>
+            </fieldset>
+
+            <label for="comments"> Comentarios </label>
+            <textarea name="comments" id="comments"></textarea>
+
+            <label>
+                Razones del viaje
+                <select name="reasons">
+                    <option value="">Por favor dinos tus razones del viaje</option>
+                    <option value="ocio">Viajo por Ocio</option>
+                    <option value="job">Viajo por Trabajo</option>
+                </select>
+            </label>
+
+            <input type="submit" value="Hacer busqueda" style="padding: 1rem;">
+        </form>
+    </main>
+
+
+    <!-- navegacion entre ejercicios -->
+    <nav>
+        <ul id="activities-list"></ul>
+    </nav>
+    <script type="module" src="code/index.js"></script>
+</body>
+
+</html>

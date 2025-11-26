@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Page</title>
+  </head>
+  <body>
+    <main>
+      <form action="datos.php" method="get">
+        <label for="name">Nombre </label>
+        <input type="text" name="name" />
+        <br />
+
+        <label>
+          Color Favorito
+          <input type="color" name="color-favorito" />
+        </label>
+        <br />
+
+        <label>
+          correo
+          <input type="email" name="correo" />
+        </label>
+        <br />
+
+        <label>
+          Fecha Nacimiento
+          <input type="date" name="fecha" />
+        </label>
+        <br />
+
+        <label>
+          Archivo
+          <input type="file" name="archivo" />
+        </label>
+        <br />
+
+        <label>
+          Edad
+          <input type="number" name="edad" />
+        </label>
+        <br />
+
+        <label>
+          Contraseña
+          <input type="password" name="contrasena" />
+        </label>
+        <br />
+
+        <label>
+          Foto
+          <input type="image" name="foto" />
+        </label>
+        <br />
+
+        <label>
+          Sitio Web
+          <input type="url" name="sitio-web" />
+        </label>
+        <br />
+
+        <label>
+          Sueldo
+          <input type="range" name="sueldo" />
+        </label>
+        <br />
+
+        <label for="asignaturas"></label>
+        <select name="asignaturas">
+          <option value="LM">Lenguaje de marcas</option>
+
+          <option value="ED">No se que clase es</option>
+
+          <option value="PR">Programacion</option>
+
+          <option value="dddd">ddd</option>
+        </select>
+
+        <br />
+
+        <input type="reset" name="sueldo" />
+
+        <input type="submit" />
+      </form>
+    </main>
+    <footer style="display: flex; width: 100%; align-items: stretch">
+      <p>Footer</p>
+      <ul style="list-style: none; display: flex; gap: 1rem">
+        <a href="http://www.google.com">Google</a>
+        <a href="hola-mundo.html">Ir a hola mundo</a>
+        <a href="hola-mundo.html">Ir a hola mundo</a>
+        <a href="form.html">Ir al formulario</a>
+        <a href="tablas.html">Ir al tabla</a>
+      </ul>
+    </footer>
+  </body>
+</html>

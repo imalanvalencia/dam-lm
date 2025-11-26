@@ -1,0 +1,289 @@
+/* --- ESTILOS GENERALES Y LAYOUT DEL SITIO --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --black: #000000ff;
+  --oxford-blue: #14213dff;
+  --orange-web: #fca311ff;
+  --platinum: #e5e5e5ff;
+  --white: #f4f4f4;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--platinum);
+  font-family: "Roboto", sans-serif;
+}
+
+/* --- Estilos del HEADER --- */
+.main-header {
+  width: 100%;
+}
+
+
+.top-section-container {
+  display: flex;
+  min-height: 80px;
+  border: 1px solid var(--oxford-blue);
+  background-color: var(--white);
+}
+
+.logo-container {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--oxford-blue);
+}
+
+.placeholder-space {
+  flex: 4;
+  background-color: var(--white);
+}
+
+.placeholder-space:first-of-type {
+  flex: 2;
+}
+
+/* Estilos de la Navegación */
+.main-nav {
+  justify-self: end;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* El display:table;  **NO** lo entiendo mucho asi que puede haber algo malo o que no sea correcto de hacer */
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  max-width: 800px;
+
+  display: table;
+  table-layout: fixed;
+  /* Asegura que la tabla ocupe el 100% del ancho */
+  width: 100%;
+}
+
+.nav-links li {
+  display: table-cell;
+  vertical-align: middle;
+  border-right: 2px solid var(--platinum);
+  background-color: var(--oxford-blue);
+
+}
+
+.nav-links li:hover {
+  background-color: var(--orange-web);
+}
+
+/* Calculo los anchos no funciona 1.5fr o 1fr */
+/* 1.5 / (1.5 + 1 + 1 + 1) = 1.5 / 4.5 ≈ 33.33% */
+/* 1 / (1.5 + 1 + 1 + 1) = 1 / 4.5 ≈ 22.22% */
+.nav-links li:first-child {
+  width: 33.33%;
+}
+
+.nav-links li:not(:first-child) {
+  width: 22.22%;
+}
+
+.nav-links li:last-child {
+  border-right: none;
+}
+
+.nav-links a {
+  display: block;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--white);
+
+}
+
+/* Contenedor para alinear MAIN y ASIDE */
+
+/* Estilo del MAIN */
+.page-content-wrapper {
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
+  padding: 0 24px;
+}
+
+.main-content {
+  flex: 3;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos del ASIDE  --- */
+.sidebar {
+  flex: 1;
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  max-height: fit-content;
+}
+
+/* --- Estilos del FORMULARIO --- */
+.signup-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+}
+
+.signup-form h3 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 14px;
+}
+
+.form-group input {
+  padding: 8px 10px;
+  border: 1px solid var(--oxford-blue);
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: var(--orange-web);
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(0, 123, 255, 0.25);
+}
+
+/* Estilo específico para el checkbox */
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+}
+
+.checkbox-group input {
+  width: auto;
+  margin-right: 8px;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+}
+
+
+/* --- ESTILO DEL BOTÓN "Dar de alta" --- */
+.btn-submit {
+  background-color: var(--oxford-blue);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: var(--orange-web);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/* --- Estilos del TOOLTIP --- */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+
+}
+
+.tooltip-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: var(--oxford-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+
+.tooltip-custom {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+
+  padding: 40px 32px;
+  color: var(--white);
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+
+  width: 250px;
+  height: 200px;
+  white-space: normal;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(-90deg, #1CB5E0 0%, #000851 100%);
+
+  border-radius: 60% 40% 38% 62% / 68% 63% 37% 32%;
+}
+
+.tooltip-container:hover .tooltip-custom {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* --- Estilos del FOOTER --- */
+.main-footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  border: 2px solid var(--oxford-blue);
+  font-size: 14px;
+  text-align: right;
+  border-bottom: none;
+}
+
+.main-footer a {
+  color: var(--orange-web);
+  text-decoration: none;
+}
+
+.main-footer a:hover {
+  color: var(--oxford-blue);
+  text-decoration: underline;
+}

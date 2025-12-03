@@ -1,0 +1,59 @@
+<!-- Respuesta del ejercicio numero 1 -->
+<!-- Crear un documento XML, que contenga la descripción de un equipo de la liga (jugadores, nombre
+del equipo, entrenador). Poner cinco jugadores. -->
+<?xml version="1.0" encoding="UTF-8"?>
+<Equipo>
+    <nombre>Paris Saint-Germain</nombre>
+    <Entrenador>
+        <nombre>Luis Enrique Martínez García</nombre>
+        <nacionalidad>España</nacionalidad>
+        <año-nacimiento>1970</año-nacimiento>
+    </Entrenador>
+
+    <Plantilla>
+        <Jugador id="1">
+            <nombre>Vítor Ferreira</nombre>
+            <dorsal>17</dorsal>
+            <ano>2000</ano>
+            <estatura>1.72</estatura>
+            <peso unidades="kg">64</peso>
+            <posicion>Centrocampista</posicion>
+        </Jugador>
+
+        <Jugador id="2">
+            <nombre>Ousmane Dembélé</nombre>
+            <dorsal>10</dorsal>
+            <ano>1997</ano>
+            <estatura>1.78</estatura>
+            <peso unidades="kg">67</peso>
+            <posicion>Delantero</posicion>
+        </Jugador>
+
+        <Jugador id="3">
+            <nombre>Désiré Doué</nombre>
+            <dorsal>14</dorsal>
+            <ano>2005</ano>
+            <estatura>1.81</estatura>
+            <peso unidades="kg">79</peso>
+            <posicion>Delantero</posicion>
+        </Jugador>
+
+        <Jugador id="4">
+            <nombre>Achraf Hakimi</nombre>
+            <dorsal>2</dorsal>
+            <ano>1998</ano>
+            <estatura>1.81</estatura>
+            <peso unidades="kg">73</peso>
+            <posicion>Lateral Derecho</posicion>
+        </Jugador>
+
+        <Jugador id="5">
+            <nombre>Nuno Mendes</nombre>
+            <dorsal>28</dorsal>
+            <ano>2002</ano>
+            <estatura>1.8</estatura>
+            <peso unidades="kg">70</peso>
+            <posicion>Lateral Izquierdo</posicion>
+        </Jugador>
+    </Plantilla>
+</Equipo>

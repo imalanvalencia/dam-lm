@@ -1,0 +1,36 @@
+<!-- Respuesta del ejercicio numero 1 -->
+<!-- Escribir un documento XML bien formado para almacenar la información del CD contenida en la siguiente imagen. Podemos observar que tenemos dos bloques de información. En la parte superior, información sobre el disco en general y en la parte inferior las canciones que lo componen. -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<album>
+    <artista>ABC (2)</artista>
+    <titulo>The Collection</titulo>
+    <sello>KARUSSELL INTERNATIONAL</sello>
+    <referencia>551 831-2</referencia>
+    <ano>1996</ano>
+    <pais>Germany</pais>
+    <formato>CD - Compilation</formato>
+    <genero>Funk / Soul, Electronic</genero>
+    <estilo>Funk Disco, Synth Pop</estilo>
+    <observaciones>Licensed from Mercury Records Ltd (London)</observaciones>
+    <cd numero="1">
+        <pista numero="01" titulo="Poison Arrow" duracion="03:23"/>
+        <pista numero="02" titulo="The Look Of Love (Part One)" duracion="03:29"/>
+        <pista numero="03" titulo="The Night You Murdered Love" duracion="04:53"/>
+        <pista numero="04" titulo="Tears Are Not Enough" duracion="03:29"/>
+        <pista numero="05" titulo="Be Near Me" duracion="03:37"/>
+        <pista numero="06" titulo="I'm In Love With You" duracion="04:35"/>
+        <pista numero="07" titulo="The Real Thing" duracion="04:54"/>
+        <pista numero="08" titulo="Love's A Dangerous Laguage" duracion="03:40"/>
+        <pista numero="09" titulo="The Greatest Love Of All" duracion="05:34"/>
+        <pista numero="10" titulo="When Smokey Sings" duracion="04:18"/>
+        <pista numero="11" titulo="One Better World" duracion="05:38"/>
+        <pista numero="12" titulo="Vanity Kills" duracion="03:29"/>
+        <pista numero="13" titulo="Bite The Hand" duracion="03:07"/>
+        <pista numero="14" titulo="Chicago (Abridged)" duracion="03:40"/>
+        <pista numero="15" titulo="Minneapolis" duracion="02:57"/>
+        <pista numero="16" titulo="Think Again" duracion="03:39"/>
+        <pista numero="17" titulo="Never More Than Now" duracion="06:03"/>
+        <pista numero="18" titulo="All Of My Heart" duracion="04:49"/>
+    </cd>
+</album>

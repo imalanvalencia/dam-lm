@@ -1,0 +1,12 @@
+<!ELEMENT alumnos (alumno+)>
+<!ELEMENT alumno (nombre, edad, grupo, dirreccion, asignaturas+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT grupo (#PCDATA)>
+<!ELEMENT dirreccion (#PCDATA)>
+<!ELEMENT asignaturas (asignatura+)>
+<!ELEMENT asignatura (LM?, BD?, PROGRAMACION?, FOL+)>
+<!ELEMENT LM (#PCDATA)>
+<!ELEMENT BD (#PCDATA)>
+<!ELEMENT PROGRAMACION (#PCDATA)>
+<!ELEMENT FOL (#PCDATA)>

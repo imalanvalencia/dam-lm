@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Recetas SYSTEM "recetas.dtd">
+
+<Recetas>
+    <Receta>
+        <Nombre ID="1">Tortilla de patatas</Nombre>
+        <Ingredientes>
+            <Ingrediente cantidad="4">Huevos</Ingrediente>
+            <Ingrediente cantidad="3">Patatas</Ingrediente>
+            <Ingrediente cantidad="1/2 vaso">Aceite de oliva</Ingrediente>
+            <Ingrediente cantidad="Al gusto">Sal</Ingrediente>
+        </Ingredientes>
+        <Preparativo>
+            <Paso ID="p1">Pelamos y cortamos las patatas en rodajas finas.</Paso>
+            <Paso ID="p2">Freímos las patatas en aceite hasta que estén tiernas.</Paso>
+            <Paso ID="p3">Batimos los huevos y los mezclamos con las patatas fritas.</Paso>
+            <Paso ID="p4">Vertemos la mezcla en una sartén y cocinamos a fuego medio hasta que cuaje.</Paso>
+            <Paso ID="p5">Damos la vuelta a la tortilla y cocinamos el otro lado.</Paso>
+            <Tiempo>30 minutos</Tiempo>
+        </Preparativo>
+    </Receta>
+</Recetas>

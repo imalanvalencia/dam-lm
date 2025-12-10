@@ -1,0 +1,11 @@
+<!ELEMENT Recetas (Receta)>
+<!ELEMENT Receta (Nombre, Ingredientes, Preparativo)>
+<!ELEMENT Nombre (#PCDATA)>
+<!ATTLIST Nombre ID NMTOKEN #IMPLIED>
+<!ELEMENT Ingredientes (Ingrediente+)>
+<!ELEMENT Ingrediente (#PCDATA) >
+<!ATTLIST Ingrediente  cantidad CDATA #REQUIRED >
+<!ELEMENT Preparativo (Paso+, Tiempo)>
+<!ELEMENT Paso (#PCDATA)>
+<!ATTLIST Paso ID NMTOKEN #REQUIRED>
+<!ELEMENT Tiempo (#PCDATA)>

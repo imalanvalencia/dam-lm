@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="alumnos.dtd" type="application/xml-dtd"?>
+
+<alumnos>
+    <alumno>
+        <nombre>Pepito</nombre>
+        <edad>15</edad>
+        <grupo>1bach</grupo>
+        <dirreccion>mi casa</dirreccion>
+        <asignaturas>
+            <asignatura>
+                <LM></LM>
+                <FOL />
+            </asignatura>
+            <asignatura>
+                <BD></BD>
+                <FOL />
+            </asignatura>
+            <asignatura>
+                <PROG></PROG>
+                <FOL />
+            </asignatura>
+            <asignatura>
+                <FOL></FOL>
+            </asignatura>
+        </asignaturas>
+    </alumno>
+</alumnos>

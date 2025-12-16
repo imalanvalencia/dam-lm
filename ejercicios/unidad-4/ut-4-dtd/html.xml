@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "HTMLsimple.dtd">
+<html>
+    <head>
+        <title>Ejemplo de página</title>
+    </head>
+    <body>
+        <h1>Bienvenidos</h1>
+        <p>Este es un párrafo con un <a href="https://example.com">enlace</a>.</p>
+        <h2>Sección secundaria</h2>
+        <p>Otro párrafo más largo con varios enlaces: <a href="https://google.com">Google</a>, <a
+                href="https://openai.com">OpenAI</a>
+        </p>
+    </body>
+</html>

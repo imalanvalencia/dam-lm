@@ -2,7 +2,8 @@
 <!-- Escribir un documento XML bien formado para almacenar la información del CD contenida en la siguiente imagen. Podemos observar que tenemos dos bloques de información. En la parte superior, información sobre el disco en general y en la parte inferior las canciones que lo componen. -->
 
 <?xml version="1.0" encoding="UTF-8"?>
-<album>
+<album xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="ejercicio-3-cd-musica.xsd">
     <artista>ABC (2)</artista>
     <titulo>The Collection</titulo>
     <sello>KARUSSELL INTERNATIONAL</sello>

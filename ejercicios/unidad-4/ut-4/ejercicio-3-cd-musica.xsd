@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="album">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="artista" type="xs:string" />
+                <xs:element name="titulo" type="xs:string" />
+                <xs:element name="sello" type="xs:string" />
+                <xs:element name="referencia" type="xs:string" />
+                <xs:element name="ano" type="xs:string" />
+                <xs:element name="pais" type="xs:string" />
+                <xs:element name="formato" type="xs:string" />
+                <xs:element name="genero" type="xs:string" />
+                <xs:element name="estilo" type="xs:string" />
+                <xs:element name="observaciones" type="xs:string" />
+                <xs:element name="cd">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="pista" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="numero" type="xs:integer" use="required" />
+                                    <xs:attribute name="titulo" use="required" />
+                                    <xs:attribute name="duracion" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="numero" type="xs:integer" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

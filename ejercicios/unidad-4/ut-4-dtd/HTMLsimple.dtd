@@ -1,0 +1,34 @@
+<!ENTITY regla14 "penal para el madrid">
+<!ENTITY % etiquetas "(h1 | h2 | p | a | ul | ol | img | table | #PCDATA)*">
+
+<!ELEMENT html (head, body)>
+
+<!ELEMENT head (title?)>
+
+<!ELEMENT title %etiquetas;>
+
+<!ELEMENT body %etiquetas;>
+
+<!ELEMENT h1 %etiquetas;>
+<!ELEMENT h2 %etiquetas;>
+
+<!ELEMENT p %etiquetas;>
+
+<!ELEMENT a %etiquetas;>
+
+<!ELEMENT ul (li+)>
+<!ELEMENT ol (li+)>
+<!ELEMENT li %etiquetas;>
+
+<!ELEMENT img EMPTY>
+
+<!ATTLIST a href CDATA #REQUIRED>
+
+<!ATTLIST img
+    src CDATA #REQUIRED
+    alt CDATA #REQUIRED>
+
+<!ELEMENT table %etiquetas;>
+<!ELEMENT tr %etiquetas;>
+<!ELEMENT th %etiquetas;>
+<!ELEMENT td %etiquetas;>

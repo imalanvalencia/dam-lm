@@ -1,15 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Playground</title>
-</head>
-<body>
-    <label>Introduce la nota</label> 
-    <input type='number' />
-     <button class="btn"> Di nota </button>
-     <p></p>
-</body>
-<script type="module" src="./js/index.js"></script>
+  </head>
+  <body>
+    <form id="nota">
+      <label>Introduce la nota</label>
+      <input type="number" />
+      <button class="btn">Di nota</button>
+      <p id="result-nota"></p>
+    </form>
+
+    <form id="adivina">
+      <label id="label-adivina"
+        >Adivina un numero entre <span id="inferior"></span> hasta
+        <span id="superior"></span
+      ></label>
+      <input type="number" />
+      <button class="btn">Di nota</button>
+      <p id="result-adivina"></p>
+    </form>
+  </body>
+  <script type="module" src="./js/index.js"></script>
 </html>

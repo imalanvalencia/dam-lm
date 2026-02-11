@@ -1,24 +1,10 @@
-<nav>
+<nav class="flex justify-between items-center sticky top-0 my-4 py-6 px-16 bg-black w-full border-2 border-gray">
+    <div>
+        <h1 class="text-2xl font-bold">Tienda Virtual</h1>
+    </div>
     <ul class="flex gap-4">
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/productos">Productos</a></li>
-        <li><a href="/contacto">Contacto</a></li>
+        <li><a class="hover:bg-rose" href="/">Inicio</a></li>
+        <li><a class="hover:bg-rose" href="/productos">Productos</a></li>
+        <li><a class="hover:bg-rose" href="/contacto">Contacto</a></li>
     </ul>
 </nav>
-
-<style>
-    nav {
-        padding: 1rem;
-        width: 100%;
-        border: var(--grey) 2px solid;
-        margin: 16px 0;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-</style>

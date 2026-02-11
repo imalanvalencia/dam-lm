@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estlilos/calculadora.css" />
+    <title>Funciones</title>
+  </head>
+  <body>
+    <button onclick="HelloWorld()">haz click para saludar</button>
+    <br />
+    <br />
+    <main class="calculadora">
+      <section class="calculadora-container">
+        <label class="calculadora-display">
+          Calculadora
+          <input id="aCalculcar" type="text" />
+          <p id="resultado"></p>
+        </label>
+        <article class="calculadora-btns">
+          <div class="funciones" id="funciones">
+            <button class="btn funcion">AC</button>
+            <button class="btn funcion">%</button>
+            <button class="btn funcion">Borrar</button>
+          </div>
+          <div class="numeros" id="numeros">
+            <button class="btn numero">00</button>
+            <button class="btn numero">.</button>
+          </div>
+          <div class="operadores" id="operaciones"></div>
+          
+          <button class="btn igual operacion" id="igual">=</button>
+        </article>
+      </section>
+    </main>
+    <script src="js/funciones.js"></script>
+  </body>
+</html>

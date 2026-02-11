@@ -1,0 +1,123 @@
+:root {
+  --color-fondo: #f0f0f0;
+  --color-calculadora: ghostwhite;
+  --color-boton: #e0e0e0;
+  --color-boton-hover: #d0d0d0;
+  --color-funcion: #ffcc00;
+  --color-operacion: #ff9500;
+  --color-igual: #007aff;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.calculadora {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-fondo);
+  font-family: sans-serif;
+}
+
+.calculadora-container {
+  background-color: var(--color-calculadora);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+
+.calculadora-display input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  font-size: 1.5rem;
+  text-align: right;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.calculadora-btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  grid-template-areas:
+    "func func func oper"
+    "num  num  num  oper"
+    "num  num  num  oper"
+    "num  num  num  equal";
+}
+
+.funciones {
+  grid-area: func;
+  display: flex;
+  gap: 10px;
+}
+
+.numeros {
+  grid-area: num;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px;
+
+}
+
+
+.operadores {
+  grid-area: oper;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.igual {
+  grid-area: equal;
+}
+
+.btn {
+  border: none;
+  padding: 15px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  background-color: var(--color-boton);
+}
+
+.btn:hover {
+  background-color: var(--color-boton-hover);
+}
+
+.btn.funcion {
+  background-color: var(--color-funcion);
+}
+.btn.operacion {
+  background-color: var(--color-operacion);
+  color: white;
+}
+.btn.igual {
+  background-color: var(--color-igual);
+  color: white;
+}
+
+.funciones .btn,
+.numeros .btn,
+.operadores .btn {
+  width: 100%;
+}

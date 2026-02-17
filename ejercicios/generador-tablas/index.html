@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Tabla</title>
+</head>
+<body>
+    <main>
+        <h1>Generador de Tabla</h1>
+        <form id="tabla-data">
+            <label for="filas">Número de filas:</label>
+            <input type="number" id="filas" name="filas" min="1" required>
+            <br>
+            <label for="columnas">Número de columnas:</label>
+            <input type="number" id="columnas" name="columnas" min="1" required>
+            <br>
+            <button>Generar Tabla</button>
+        </form>
+        <table id="tabla-contenedor" border="1"></table>
+
+        <script src="main.js"></script>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>El laberinto del amante</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+<div class="cabecera">
+    <div class="cabecera">
+        <h1>❤️ El amante busca a su amado/a ❤️</h1>
+        <h2><p id="mensaje"></p></h2>
+    </div>
+    <div class="controles">
+        <button class="arriba" id="arriba" onclick="moverArriba()">↑</button>
+        <div class="medio">
+            <button class="izquierda" id="izquierda" onclick="moverIzquierda()">←</button>
+            <button class="abajo" id="abajo" onclick="moverAbajo()">↓</button>
+            <button class="derecha" id="derecha" onclick="moverDerecha()">→</button>
+        </div>
+    </div>
+</div>  
+
+<table id="laberinto">
+    <tbody>
+        <tr>
+            <td id="td_0-0" class="pared">X</td>
+            <td id="td_0-1" class="pared">X</td>
+            <td id="td_0-2" class="pared">X</td>
+            <td id="td_0-3" class="pared">X</td>
+            <td id="td_0-4" class="pared">X</td>
+            <td id="td_0-5" class="pared">X</td>
+            <td id="td_0-6" class="pared">X</td>
+            <td id="td_0-7" class="pared">X</td>
+            <td id="td_0-8" class="pared">X</td>
+            <td id="td_0-9" class="pared">X</td>
+            <td id="td_0-10" class="pared">X</td>
+            <td id="td_0-11" class="pared">X</td>
+            <td id="td_0-12" class="pared">X</td>
+            <td id="td_0-13" class="pared">X</td>
+            <td id="td_0-14" class="pared">X</td>
+        </tr>
+        <tr>
+            <td id="td_1-0" class="pared">X</td>
+            <td id="td_1-1" class="jugador">🤵</td>
+            <td id="td_1-2" class="camino"> </td>
+            <td id="td_1-3" class="camino"> </td>
+            <td id="td_1-4" class="pared">X</td>
+            <td id="td_1-5" class="camino"> </td>
+            <td id="td_1-6" class="camino"> </td>
+            <td id="td_1-7" class="camino"> </td>
+            <td id="td_1-8" class="pared">X</td>
+            <td id="td_1-9" class="camino"> </td>
+            <td id="td_1-10" class="camino"> </td>
+            <td id="td_1-11" class="camino"> </td>
+            <td id="td_1-12" class="camino"> </td>
+            <td id="td_1-13" class="camino"> </td>
+            <td id="td_1-14" class="pared">X</td>
+        </tr>
+        <tr>
+            <td id="td_2-0" class="pared">X</td>
+            <td id="td_2-1" class="camino"> </td>
+            <td id="td_2-2" class="pared">X</td>
+            <td id="td_2-3" class="camino"> </td>
+            <td id="td_2-4" class="pared">X</td>
+            <td id="td_2-5" class="camino"> </td>
+            <td id="td_2-6" class="pared">X</td>
+            <td id="td_2-7" class="camino"> </td>
+            <td id="td_2-8" class="pared">X</td>
+            <td id="td_2-9" class="camino"> </td>
+            <td id="td_2-10" class="pared">X</td>
+            <td id="td_2-11" class="pared">X</td>
+            <td id="td_2-12" class="pared">X</td>
+            <td id="td_2-13" class="camino"> </td>
+            <td id="td_2-14" class="pared">X</td>
+        </tr>
+        <tr>
+            <td id="td_3-0" class="pared">X</td>
+            <td id="td_3-1" class="camino"> </td>
+            <td id="td_3-2" class="pared">X</td>
+            <td id="td_3-3" class="camino"> </td>
+            <td id="td_3-4" class="camino"> </td>
+            <td id="td_3-5" class="camino"> </td>
+            <td id="td_3-6" class="pared">X</td>
+            <td id="td_3-7" class="camino"> </td>
+            <td id="td_3-8" class="camino"> </td>
+            <td id="td_3-9" class="camino"> </td>
+            <td id="td_3-10" class="camino"> </td>
+            <td id="td_3-11" class="camino"> </td>
+            <td id="td_3-12" class="pared">X</td>
+            <td id="td_3-13" class="camino"> </td>
+            <td id="td_3-14" class="pared">X</td>
+        </tr>
+        <tr>
+            <td id="td_4-0" class="pared">X</td>
+            <td id="td_4-1" class="camino"> </td>
+            <td id="td_4-2" class="pared">X</td>
+            <td id="td_4-3" class="pared">X</td>
+            <td id="td_4-4" class="pared">X</td>
+            <td id="td_4-5" class="pared">X</td>
+            <td id="td_4-6" class="pared">X</td>
+            <td id="td_4-7" class="pared">X</td>
+            <td id="td_4-8" class="pared">X</td>
+            <td id="td_4-9" class="pared">X</td>
+            <td id="td_4-10" class="pared">X</td>
+            <td id="td_4-11" class="camino"> </td>
+            <td id="td_4-12" class="pared">X</td>
+            <td id="td_4-13" class="camino"> </td>
+            <td id="td_4-14" class="pared">X</td>
+        </tr>
+        <tr>
+            <td id="td_5-0" class="pared">X</td>
+            <td id="td_5-1" class="camino"> </td>
+            <td id="td_5-2" class="camino"> </td>
+            <td id="td_5-3" class="camino"> </td>
+            <td id="td_5-4" class="camino"> </td>
+            <td id="td_5-5" class="camino"> </td>
+            <td id="td_5-6" class="camino"> </td>
+            <td id="td_5-7" class="camino"> </td>
+            <td id="td_5-8" class="camino"> </td>
+            <td id="td_5-9" class="camino"> </td>
+            <td id="td_5-10" class="pared">X</td>
+            <td id="td_5-11" class="camino"> </td>
+            <td id="td_5-12" class="pared">X</td>
+            <td id="td_5-13" class="camino"> </td>
+            <td id="td_5-14" class="pared">X</td>
+        </tr>
+        <tr>
+            <td id="td_6-0" class="pared">X</td>
+            <td id="td_6-1" class="pared">X</td>
+            <td id="td_6-2" class="pared">X</td>
+            <td id="td_6-3" class="pared">X</td>
+            <td id="td_6-4" class="pared">X</td>
+            <td id="td_6-5" class="pared">X</td>
+            <td id="td_6-6" class="pared">X</td>
+            <td id="td_6-7" class="pared">X</td>
+            <td id="td_6-8" class="pared">X</td>
+            <td id="td_6-9" class="camino"> </td>
+            <td id="td_6-10" class="pared">X</td>
+            <td id="td_6-11" class="camino"> </td>
+            <td id="td_6-12" class="pared">X</td>
+            <td id="td_6-13" class="camino"> </td>
+            <td id="td_6-14" class="pared">X</td>
+        </tr>
+        <tr>
+            <td id="td_7-0" class="pared">X</td>
+            <td id="td_7-1" class="camino"> </td>
+            <td id="td_7-2" class="camino"> </td>
+            <td id="td_7-3" class="camino"> </td>
+            <td id="td_7-4" class="camino"> </td>
+            <td id="td_7-5" class="camino"> </td>
+            <td id="td_7-6" class="camino"> </td>
+            <td id="td_7-7" class="camino"> </td>
+            <td id="td_7-8" class="pared">X</td>
+            <td id="td_7-9" class="camino"> </td>
+            <td id="td_7-10" class="pared">X</td>
+            <td id="td_7-11" class="camino"> </td>
+            <td id="td_7-12" class="pared">X</td>
+            <td id="td_7-13" class="camino"> </td>
+            <td id="td_7-14" class="pared">X</td>
+        </tr>
+        <tr>
+            <td id="td_8-0" class="pared">X</td>
+            <td id="td_8-1" class="camino"> </td>
+            <td id="td_8-2" class="pared">X</td>
+            <td id="td_8-3" class="pared">X</td>
+            <td id="td_8-4" class="pared">X</td>
+            <td id="td_8-5" class="pared">X</td>
+            <td id="td_8-6" class="pared">X</td>
+            <td id="td_8-7" class="camino"> </td>
+            <td id="td_8-8" class="pared">X</td>
+            <td id="td_8-9" class="camino"> </td>
+            <td id="td_8-10" class="pared">X</td>
+            <td id="td_8-11" class="camino"> </td>
+            <td id="td_8-12" class="pared">X</td>
+            <td id="td_8-13" class="camino"> </td>
+            <td id="td_8-14" class="pared">X</td>
+        </tr>
+        <tr>
+            <td id="td_9-0" class="pared">X</td>
+            <td id="td_9-1" class="camino"> </td>
+            <td id="td_9-2" class="camino"> </td>
+            <td id="td_9-3" class="camino"> </td>
+            <td id="td_9-4" class="camino"> </td>
+            <td id="td_9-5" class="camino"> </td>
+            <td id="td_9-6" class="pared">X</td>
+            <td id="td_9-7" class="camino"> </td>
+            <td id="td_9-8" class="camino"> </td>
+            <td id="td_9-9" class="camino"> </td>
+            <td id="td_9-10" class="pared">X</td>
+            <td id="td_9-11" class="camino"> </td>
+            <td id="td_9-12" class="camino"> </td>
+            <td id="td_9-13" class="camino"> </td>
+            <td id="td_9-14" class="pared">X</td>
+        </tr>
+        <tr>
+            <td id="td_10-0" class="pared">X</td>
+            <td id="td_10-1" class="camino"> </td>
+            <td id="td_10-2" class="pared">X</td>
+            <td id="td_10-3" class="pared">X</td>
+            <td id="td_10-4" class="pared">X</td>
+            <td id="td_10-5" class="camino"> </td>
+            <td id="td_10-6" class="pared">X</td>
+            <td id="td_10-7" class="pared">X</td>
+            <td id="td_10-8" class="pared">X</td>
+            <td id="td_10-9" class="pared">X</td>
+            <td id="td_10-10" class="pared">X</td>
+            <td id="td_10-11" class="pared">X</td>
+            <td id="td_10-12" class="pared">X</td>
+            <td id="td_10-13" class="camino"> </td>
+            <td id="td_10-14" class="pared">X</td>
+        </tr>
+        <tr>
+            <td id="td_11-0" class="pared">X</td>
+            <td id="td_11-1" class="camino"> </td>
+            <td id="td_11-2" class="camino"> </td>
+            <td id="td_11-3" class="camino"> </td>
+            <td id="td_11-4" class="pared">X</td>
+            <td id="td_11-5" class="camino"> </td>
+            <td id="td_11-6" class="camino"> </td>
+            <td id="td_11-7" class="camino"> </td>
+            <td id="td_11-8" class="camino"> </td>
+            <td id="td_11-9" class="camino"> </td>
+            <td id="td_11-10" class="camino"> </td>
+            <td id="td_11-11" class="camino"> </td>
+            <td id="td_11-12" class="pared">X</td>
+            <td id="td_11-13" class="camino"> </td>
+            <td id="td_11-14" class="pared">X</td>
+        </tr>
+        <tr>
+            <td id="td_12-0" class="pared">X</td>
+            <td id="td_12-1" class="camino"> </td>
+            <td id="td_12-2" class="pared">X</td>
+            <td id="td_12-3" class="pared">X</td>
+            <td id="td_12-4" class="pared">X</td>
+            <td id="td_12-5" class="pared">X</td>
+            <td id="td_12-6" class="pared">X</td>
+            <td id="td_12-7" class="pared">X</td>
+            <td id="td_12-8" class="pared">X</td>
+            <td id="td_12-9" class="pared">X</td>
+            <td id="td_12-10" class="pared">X</td>
+            <td id="td_12-11" class="camino"> </td>
+            <td id="td_12-12" class="pared">X</td>
+            <td id="td_12-13" class="camino"> </td>
+            <td id="td_12-14" class="pared">X</td>
+        </tr>
+        <tr>
+            <td id="td_13-0" class="pared">X</td>
+            <td id="td_13-1" class="camino"> </td>
+            <td id="td_13-2" class="camino"> </td>
+            <td id="td_13-3" class="camino"> </td>
+            <td id="td_13-4" class="camino"> </td>
+            <td id="td_13-5" class="camino"> </td>
+            <td id="td_13-6" class="camino"> </td>
+            <td id="td_13-7" class="camino"> </td>
+            <td id="td_13-8" class="camino"> </td>
+            <td id="td_13-9" class="camino"> </td>
+            <td id="td_13-10" class="camino"> </td>
+            <td id="td_13-11" class="camino"> </td>
+            <td id="td_13-12" class="camino"> </td>
+            <td id="td_13-13" class="meta">❤️</td>
+            <td id="td_13-14" class="pared">X</td>
+        </tr>
+        <tr>
+            <td id="td_14-0" class="pared">X</td>
+            <td id="td_14-1" class="pared">X</td>
+            <td id="td_14-2" class="pared">X</td>
+            <td id="td_14-3" class="pared">X</td>
+            <td id="td_14-4" class="pared">X</td>
+            <td id="td_14-5" class="pared">X</td>
+            <td id="td_14-6" class="pared">X</td>
+            <td id="td_14-7" class="pared">X</td>
+            <td id="td_14-8" class="pared">X</td>
+            <td id="td_14-9" class="pared">X</td>
+            <td id="td_14-10" class="pared">X</td>
+            <td id="td_14-11" class="pared">X</td>
+            <td id="td_14-12" class="pared">X</td>
+            <td id="td_14-13" class="pared">X</td>
+            <td id="td_14-14" class="pared">X</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<script src="script.js"></script>
+</body>
+</html>

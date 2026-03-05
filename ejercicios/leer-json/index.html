@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leer un JSON</title>
+  </head>
+  <body>
+    <main>
+      <section></section>
+    </main>
+    <script>
+      let $div = document.querySelector("section");
+      let REQUEST_URL = "http://127.0.0.1:5500/";
+
+      fetch(`${REQUEST_URL}/data.json`)
+        .then((response) => response.ok && response.json())
+        .then((data) => {
+          $div.innerHTML = data
+            .map(
+              ({ name, email, body }) =>
+                `<div style="border:1px solid black;padding: 10px;">
+                  <p><span style="font-weight:bold;">nombre:</span> ${name}</p>
+                  <p><span style="font-weight:bold;">email:</span> ${email}</p>
+                  <p><span style="font-weight:bold;">body:</span> ${body}</p>
+                </div>`,
+            )
+            .join("");
+        });
+    </script>
+  </body>
+</html>

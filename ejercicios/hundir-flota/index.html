@@ -1,19 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Hundir Flota</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <h1>Hundir al Real Vardrid</h1>
+      <section class="texto">
+        <h1>Hundir al Real Vardrid🐢🥷</h1>
+        <article class="mensajes-seccion">
+          <p>Intentos: <span id="intentos">0</span></p>
+          <p id="mensaje">Comience el juego🌀⛴️</p>
+        </article>
+        <p id="descripcion">Presiona "Iniciar el Juego" para comenzar</p>
+      </section>
+
+      <section class="botones">
         <button id="iniciar">Iniciar el Juego</button>
-        <p id="mensaje"></p>
-        <table id="flota" border="1"></table>
+        <button id="mostrar-todo">Mostrar todo</button>
+      </section>
+
+      <table id="flota" border="1"></table>
     </main>
-    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

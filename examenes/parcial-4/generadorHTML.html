@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Generador HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>Generador de HTML</h1>
+
+    <div class="formulario">
+        <label>Tipo de elemento:</label>
+        <select id="tipoElemento">
+            <option value="p">Párrafo</option>
+            <option value="img">Imagen</option>
+            <option value="button">Botón</option>
+            <option value="tabla">Tabla</option>
+            <option value="enlace">Enlace</option>
+            <option value="h1">H1</option>
+        </select>
+
+        <label>Texto / Contenido:</label>
+        <input type="text" id="contenido">
+
+        <label>Color:</label>
+        <input type="color" id="color">
+
+        <label>ID:</label>
+        <div class="input-grupal">
+            <input type="text" id="idElemento">
+            <button id="borrar" onclick="borrar()">Borrar</button>
+        </div>
+        <!-- <div>
+            <label>ID:</label>
+        <input type="text" id="idElemento">
+        <button id="borrar"></button>
+        </div> -->
+        <button id="crear">Crear elemento</button>
+    </div>
+
+    <h2>Resultado:</h2>
+    <div id="resultado"></div>
+    <h2>Código generado:</h2>
+    <pre id="codigo"></pre>
+    <script src="script.js"></script>    
+</body>
+
+</html>

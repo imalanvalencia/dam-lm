@@ -1,0 +1,132 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f4f6f8;
+    padding: 20px;
+    color: #333;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Formulario */
+.formulario {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+.formulario label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Inputs y select */
+.formulario input,
+.formulario select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Botón */
+.formulario button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.formulario button:hover {
+    background-color: #005fcc;
+}
+
+/* Zona de resultado */
+#resultado {
+    margin-top: 20px;
+    padding: 20px;
+    min-height: 150px;
+    background-color: #ffffff;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+}
+
+/* Elementos generados */
+#resultado * {
+    margin: 10px 0;
+}
+
+/* Código generado (opcional) */
+#codigo {
+    background-color: #1e1e1e;
+    color: #00ff88;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    white-space: pre-wrap;
+    font-family: monospace;
+    white-space: pre-wrap;
+    tab-size: 2;
+}
+
+/* Contenedor para alinear input y botón */
+.input-grupal {
+    display: flex;
+    gap: 10px;
+    /* Espacio entre el input y el botón */
+    align-items: center;
+}
+
+/* Ajuste para que el input no empuje al botón fuera del contenedor */
+.input-grupal input {
+    margin-top: 0;
+    /* Quita el margen superior para que alineen bien */
+    flex: 1;
+    /* Hace que el input ocupe el espacio sobrante */
+}
+
+/* Botón borrar específico */
+#borrar {
+    background-color: #ff4d4d;
+    /* Rojo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    width: auto;
+    /* Para que no ocupe el 100% como los otros botones */
+    margin-top: 0;
+}
+
+#borrar:hover {
+    background-color: #cc0000;
+    /* Rojo más oscuro al pasar el ratón */
+}
